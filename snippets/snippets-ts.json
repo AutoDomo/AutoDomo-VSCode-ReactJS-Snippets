@@ -1,30 +1,252 @@
 {
-  "styles": {
-    "prefix": "adrsc",
+	"import React": {
+    "prefix": "adir",
     "body": [
-      "import styled from 'styled-components';",
+      "import React from 'react'"
+    ],
+    "description": "Import React"
+  },
+
+  "useCallback": {
+    "prefix": "aduca",
+    "body": [
+      "import { useCallback } from 'react';",
       "",
-      "export const ${1:Container} = styled.${2:div}`",
+      "const ${1:example} = useCallback(() => {${2:functionExample}()}, []);"
+    ],
+    "description": "Display a useCallback Line"
+  },
+
+  "useContext": {
+    "prefix": "aduco",
+    "body": [
+      "import { useContext } from 'react';",
+      "",
+      "const ${1:example} = useContext();"
+    ],
+    "description": "Display a useContext Line"
+  },
+
+  "useEffect": {
+    "prefix": "adue",
+    "body": [
+      "import { useEffect } from 'react';",
+      "",
+      "useEffect(() => {}, []);"
+    ],
+    "description": "Display a useEffect Line"
+  },
+
+  "useMemo": {
+    "prefix": "adum",
+    "body": [
+      "import { useMemo } from 'react';",
+      "",
+      "const ${1:example} = useMemo(() => ${2:functionExample}(), {});"
+    ],
+    "description": "Display a useMemo Line"
+  },
+
+  "useReducer": {
+    "prefix": "adrd",
+    "body": [
+      "import { useReducer } from 'react';",
+      "",
+      "const [${1:state}, ${2:dispatch}] = useReducer();"
+    ],
+    "description": "Display a useReducer Line"
+  },
+
+  "useRef": {
+    "prefix": "adrf",
+    "body": [
+      "import { useRef } from 'react';",
+      "",
+      "const ${1:example} = useRef();"
+    ],
+    "description": "Display a useRef Line"
+  },
+
+  "useState": {
+    "prefix": "adus",
+    "body": [
+      "import { useState } from 'react';",
+      "",
+      "const [${1:example} , ${1:setExample}] = useState();"
+    ],
+    "description": "Display a useState Line"
+  },
+
+  "stylesheet": {
+    "prefix": "adss",
+    "body": [
+      "import { StyleSheet } from 'react-native';",
+      "",
+      "const styles = StyleSheet.create({});",
+      "",
+      "export default styles;"
+    ],
+    "description": "Create React Native StyleSheet File"
+  },
+
+  "styled-components": {
+    "prefix": "adsc",
+    "body": [
+      "import styled from 'styled-components/native';",
+      "",
+      "export const ${1:Container} = styled.${2:View}`",
       "  ${3}",
       "`;",
       ""
     ],
-    "description": "Create ReactJS Styled Components file"
+    "description": "Create React Native Styled Components File"
   },
 
-  "componentFunctionalTypescript": {
-    "prefix": "adrfc",
+  "Object": {
+    "prefix": "ado",
+    "body": "const ${1:example} = {}",
+    "description": "Creates a Object"
+  },
+  
+  "Array": {
+    "prefix": "ada",
+    "body": "const ${1:example} = []",
+    "description": "Creates a Array"
+  },
+
+  "Stateless Functional Component": {
+    "prefix": "adsfc",
     "body": [
       "import React from 'react';",
+      "import { View } from 'react-native';",
       "",
-      "// import { Container } from './styles';",
-      "",
-      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: React.FC = () => {",
-      "  return <div />;",
-      "}",
+      "const ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} = () => <View />;",
       "",
       "export default ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}};"
     ],
-    "description": "Create ReactJS Functional Component Typescript"
-  }	
+    "description": "Create React Native Functional Component"
+  },
+
+  "Redux Store": {
+    "prefix": "adrs2",
+    "body": [
+      "import { createStore } from 'redux';",
+      "import { persistStore, persistReducer } from 'redux-persist';",
+      "import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';",
+      "",
+      "import AsyncStorage from '@react-native-async-storage/async-storage';",
+      "",
+      "import rootReducer from '../reducers';",
+      "",
+      "const persistConfig = {",
+      "  key: `root`,",
+      "  storage: AsyncStorage,",
+      "  stateReconciler: autoMergeLevel2,",
+      "};",
+      "",
+      "const persistedReducer = persistReducer(persistConfig, rootReducer);",
+      "const store = createStore(persistedReducer);",
+      "const persistor = persistStore(store);",
+      "",
+      "export const getPersistor = () => persistor;",
+      "export const getStore = () => store;",
+      "export const getState = () => store.getState();",
+      "",
+      "export default {",
+      "  getPersistor,",
+      "  getStore,",
+      "  getState,",
+      "};"
+    ],
+    "description": "Creates Redux Store"
+  },
+
+  "Redux Type": {
+    "prefix": "adrt",
+    "body": [
+      "export const ${1:EXAMPLE} = '${1:EXAMPLE}';"
+    ],
+    "description": "Creates Redux Type"
+  },
+
+  "Redux Combined Reducers": {
+    "prefix": "adcr",
+    "body": [
+      "import { combineReducers } from 'redux';",
+      "",
+      "import ${1:example} from './${1:example}';",
+      "",
+      "const rootReducer = combineReducers({",
+      "  ${1:example},",
+      "});",
+      "",
+      "export default rootReducer;"
+    ],
+    "description": "Creates Redux Combined Reducers File"
+  },
+
+  "Redux New Reducer": {
+    "prefix": "adnr",
+    "body": [
+      "import { ${1:SEARCH_EXAMPLE} } from '../types';",
+      "",
+      "const INITIAL_STATE = {",
+      "  ${2:example}: {},",
+      "};",
+      "",
+      "export default (state = INITIAL_STATE, action) => {",
+      "  if (action.type === ${1:SEARCH_EXAMPLE}) {",
+      "    return { ...state, ${3:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}}: action.payload };",
+      "  }",
+      "",
+      "  return state;",
+      "};"
+    ],
+    "description": "Creates New Reducer File"
+  },
+
+  "Redux New Action": {
+    "prefix": "adna",
+    "body": [
+      "import { ${1:SEARCH_EXAMPLE} } from '../types';",
+      "",
+      "export const ${2:searchExample} = (payload) => ({",
+      "  type: ${1:SEARCH_EXAMPLE},",
+      "  payload,",
+      "});"
+    ],
+    "description": "Creates New Action File"
+  },
+
+  "Redux New useDispatch": {
+    "prefix": "adnud",
+    "body": [
+      "import { useDispatch } from 'react-redux';",
+      "",
+      "const ${1:exampleDispatch} = useDispatch();",
+      "",
+      "${1:exampleDispatch}({ type: '${2:exampleAction}', payload: '${3:exampleValue}' });"
+    ],
+    "description": "Display a useDispatch Structure"
+  },
+  
+  "Redux New useSelector": {
+    "prefix": "adnus",
+    "body": [
+      "import { useSelector } from 'react-redux';",
+      "",
+      "const ${1:exampleSelector} = useSelector(",
+      "  (state) => state.${2:exampleReducer}.${3:exampleState}",
+      ");"
+    ],
+    "description": "Display a useSelector Structure"
+  },
+   
+  "Debbug": {
+    "prefix": "adcl",
+    "body": [
+      "console.log('${1:object}: ', ${1:object});"
+    ],
+    "description": "Displays a Message in the Console"
+  }
 }

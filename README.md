@@ -43,10 +43,29 @@ Para instalar uma extensão você pode executar o **Command Pallete** através d
 
 Abaixo segue a lista com todos os Snippets disponíveis e os gatilhos para cada um. O **⇥** significa a tecla `TAB`.
 
-|                    Gatilho | Conteúdo                                                                      |
-| -------------------------: | ----------------------------------------------------------------------------- |
-|                    `adrfc →` | Cria um Componente **Functional**                                             |
-|           `adrsc →` | Cria um arquivo de Estilização com **Styled Components**                      |
+|                 Gatilho | Conteúdo                                                                      |
+| ----------------------: | ----------------------------------------------------------------------------- |
+|                `adir →` | Importa o **React**                                                          |
+|               `aduca →` | Exibe o **useCallback**                                                       |
+|               `aduco →` | Exibe o **useContext**                                                        |
+|                `adue →` | Exibe o **useEffect**                                                         |
+|                `adum →` | Exibe o **useMemo**                                                           |
+|                `adrd →` | Exibe o **useReducer**                                                        |
+|                `adrf →` | Exibe o **useRef**                                                            |
+|                `adus →` | Exibe o **useState**                                                          |
+|                `adss →` | Cria um Arquivo **StyleSheet**                                                |
+|                `adsc →` | Cria um Arquivo **Styled-Components**                                         |
+|                `ado →` | Cria um **Objeto**                                                             |
+|                `ada →` | Cria um **Array**                                                              |
+|                `adsfc →` | Cria um **Stateless Functional Component**                                   |
+|                `adrs1 →` | Estrutura - **Redux Store**                                                   |
+|                `adrt →` | Estrutura - **Redux Type**                                                    |
+|                `adcr →` | Estrutura - **Redux Combined Reducers**                                       |
+|                `adnr →` | Adiciona Novo **Reducer**                                                     |
+|                `adna →` | Adiciona Nova **Action**                                                      |
+|                `adnud →` | Estrutura - **useDispatch**                                                      |
+|                `adnus →` | Estrutura - **useSelector**                                                      |
+|                `adcl →` | Cria um **console.log**                                                       |
 
 <!-- CONTRIBUTING -->
 
