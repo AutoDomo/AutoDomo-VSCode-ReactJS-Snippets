@@ -1,7 +1,7 @@
 {
   "name": "autodomoreactjs",
   "description": "ReactJS snippets created by AutoDomo.",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "displayName": "AutoDomo React JS",
   "publisher": "autodomo",
   "icon": "images/autodomo.png",
